@@ -1,0 +1,179 @@
+:root{
+  --VeryDarkGrayishBlue: #48556a;
+  --DesaturatedDarkBlue: #6d7f97;
+  --GrayishBlue: #9eafc2;
+  --LightGrayishBlue: #ecf2f8;
+  --fontSize: 13px;
+}
+
+.main{
+  width: 26em;
+  background-color: #ffffff;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 0.9em var(--GrayishBlue);
+}
+
+.main .drawer{
+  width: 100%;
+  height: 15em;
+  border-radius: 1em 1em 0 0;  
+}
+
+.main .component-info{
+  padding: 2em 2.7em;
+}
+
+.main .component-info h3{
+  font-size: 16px;
+  margin-bottom: 1em;
+  line-height: 1.4em;
+  color: var(--VeryDarkGrayishBlue);
+}
+
+.main .component-info p{
+  line-height: 1.4em;
+  color: var(--DesaturatedDarkBlue);
+}
+
+.main .user-info{
+  width: 100%;
+}
+
+.main .user-info .user-contact-route{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.7em 2em 2.7em;
+}
+
+.main .user-info .user-contact-route .user-and-date{
+  display: flex;
+  gap: 1em;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+}
+
+.main .user-info .user-contact-route .share, .main .user-info .contacts-mobile .share1{
+  background-color: var(--LightGrayishBlue);
+  padding: 0.7em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main .user-info .user-contact-route .user-and-date img{
+  width: 4em;
+  border-radius: 50%;
+}
+
+.main .user-info .user-contact-route .user-and-date .date{
+  color: var(--DesaturatedDarkBlue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main .user-info .user-contact-route .user-and-date .date span{
+  font-weight: 700;
+  color: var(--VeryDarkGrayishBlue);
+}
+
+.main .user-info .contacts-mobile{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--VeryDarkGrayishBlue);
+  padding: 1.7em 2.7em;
+  border-radius: 0 0 1em 1em;
+  position: absolute;
+  z-index: 1;
+  bottom: 0em;
+  opacity: 0;
+}
+
+.main .user-info .contacts-mobile-d{
+  opacity: 1;
+  position: absolute;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--VeryDarkGrayishBlue);
+  padding: 1em 2em;
+  border-radius: 0.7em;
+  z-index: 1;
+  top: 9.5em;
+  left: 42em;
+  opacity: 0;
+  box-shadow: 0 0 0.5em var(--VeryDarkGrayishBlue);
+}
+
+.main .user-info .contacts-mobile .icons{
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+  transition: 400ms all ease;
+}
+
+.main .user-info .contacts-mobile-d .icons{
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+  transition: 400ms all ease;
+}
+
+.main .user-info .contacts-mobile .icons p, main .user-info .contacts-mobile-d .icons p{
+  color: var(--GrayishBlue);
+  letter-spacing: 6px;
+}
+
+.main .user-info .contacts-mobile .share, main .user-info .contacts-mobile .share1{
+  background-color: #ffffff;
+  padding: 0.7em;
+  border-radius: 50%;
+  color: #111;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1115px){
+  .main {
+    flex-direction: row;
+    width: 55em;
+  }
+
+  .main .user-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .main .drawer{
+    width: 20em;
+    height: 19.1em;
+    border-radius: 1em 0 0 1em;
+  }
+
+  .main .user-info .contacts-mobile{
+    display: none;
+  }
+}
+
+.fb-icon:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.tw-icon:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.pt-icon:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
