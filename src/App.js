@@ -1,6 +1,12 @@
 import "./App.css";
 import React, {useState} from "react";
 import { useMediaQuery } from "react-responsive";
+import imgD from './drawers.jpg';
+import imgMic from './avatar-michelle.jpg';
+import logoShare from './share.svg';
+import iconF from './icon-facebook.svg';
+import iconT from './icon-twitter.svg';
+import iconP from './icon-pinterest.svg';
 
 export function Component() {
 
@@ -13,7 +19,7 @@ export function Component() {
   return (
     <>
       <main className="main">
-        <img src="/drawers.jpg" alt="Foto" className="drawer"/>
+        <img src={imgD} alt="Foto" className="drawer"/>
         <div className="flex-behave">
           <article className="component-info">
             <h3>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h3>
@@ -23,14 +29,14 @@ export function Component() {
           <article className="user-info">
             <div className="user-contact-route">
               <div className="user-and-date">
-                <img alt="a" src="/avatar-michelle.jpg" />
+                <img alt="a" src={imgMic} />
                 <div className="date">
                   <span>Michelle Appleton</span>
                   <p>28 Jun 2020</p>
                 </div>
               </div>
 
-              <img alt="img" src="/share.svg" className="share" onMouseOver={()=>{
+              <img alt="img" src={logoShare} className="share" onMouseOver={()=>{
                 setWord2(word2 = '1');
                 setBool(bool = true)
                 setDisplay(display = 'flex')
@@ -44,12 +50,12 @@ export function Component() {
             <div className="contacts-mobile" style={{opacity: word}}>
               <div className="icons">
                 <p>SHARE</p>
-                <img alt="a" src="/icon-facebook.svg" className="fb-icon" />
-                <img alt="a" src="/icon-twitter.svg" className="tw-icon" />
-                <img alt="a" src="/icon-pinterest.svg" className="pt-icon" />
+                <img alt="a" src={iconF} className="fb-icon" />
+                <img alt="a" src={iconT} className="tw-icon" />
+                <img alt="a" src={iconP} className="pt-icon" />
               </div>
 
-              <img src="/icon-share.svg" alt="a" className="share1" onClick={() => {
+              <img src={logoShare} alt="a" className="share1" onClick={() => {
                 if (word === '0') {
                   setWord(word = '1')
                 } else {
@@ -68,9 +74,9 @@ export function Component() {
             }}>
               <div className="icons">
                 <p>SHARE</p>
-                <img alt="a" src="/icon-facebook.svg" className="fb-icon" />
-                <img alt="a" src="/icon-twitter.svg" className="tw-icon" />
-                <img alt="a" src="/icon-pinterest.svg" className="pt-icon" />
+                <img alt="a" src={iconF} className="fb-icon" />
+                <img alt="a" src={iconT} className="tw-icon" />
+                <img alt="a" src={iconP} className="pt-icon" />
               </div>
             </div>
           </article>
