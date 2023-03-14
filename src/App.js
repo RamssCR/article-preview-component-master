@@ -6,7 +6,8 @@ export function Component() {
 
   let [word, setWord] = useState('')
   let [word2, setWord2] = useState('')
-  let onComp;
+  let [bool, setBool] = useState(false)
+  let [display, setDisplay] = useState('')
   const widthSize = useMediaQuery({query: '(min-width: 1115px)'})
 
   return (
@@ -31,12 +32,12 @@ export function Component() {
 
               <img alt="img" src="/share.svg" className="share" onMouseOver={()=>{
                 setWord2(word2 = '1');
-                onComp = true
-                console.log(onComp)
+                setBool(bool = true)
+                setDisplay(display = 'flex')
               }} onMouseOut={()=>{
                 setWord2(word2 = '0')
-                onComp = false
-                console.log(onComp)
+                setBool(bool = false)
+                setDisplay(display = 'none')
               }}/>
             </div>
 
@@ -57,13 +58,13 @@ export function Component() {
               }}/>
             </div>
 
-            <div className="contacts-mobile-d" style={{opacity: word2, display: onComp = true && widthSize ? 'flex' : 'none'}}
+            <div className="contacts-mobile-d" style={{opacity: word2, display: bool && widthSize ? display : display}}
             onMouseOver={()=>{
+              setDisplay(display = 'flex')
               setWord2(word2 = '1');
-              onComp = true
             }} onMouseOut={()=>{
+              setDisplay(display = 'none')
               setWord2(word2 = '0')
-              onComp = false
             }}>
               <div className="icons">
                 <p>SHARE</p>

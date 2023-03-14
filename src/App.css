@@ -113,6 +113,19 @@ button{
   box-shadow: 0 0 0.5em var(--VeryDarkGrayishBlue);
 }
 
+.main .user-info .contacts-mobile-d:before{
+  content: '';
+  width: 2em;
+  height: 2em;
+  background-color: var(--VeryDarkGrayishBlue);
+  position: absolute;
+  left: 8em;
+  top: 2em;
+  transform: rotate(45deg);
+  box-shadow: 0 0 0.5em var(--VeryDarkGrayishBlue);
+  z-index: -1;
+}
+
 .main .user-info .contacts-mobile .icons{
   display: flex;
   gap: 1.2em;
